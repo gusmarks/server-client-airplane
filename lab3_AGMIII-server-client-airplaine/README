@@ -1,0 +1,30 @@
+README:
+this is a client server program designed to create a plane and sell tickets to clients.
+
+
+there are two files requierd to make this program run properly. 
+
+server.c, and client.c.
+
+server.c is complied like this : gcc -o server server.c -pthread
+and run like this ./server, or the dimentions of the plane that the server works on may be entered like so:./server row column, ./server 5 5 will make a plane that is 5x5
+
+and client is commpiled like: gcc -o client client.c 
+and run like this: ./client 
+
+the assinment states to have a ini file to give the ip,port,and time out. this file dose not work here, if one is entered nothing diferent will happen. 
+
+use:
+when the server is loaded it will start to wait for clients.
+
+when a client is loaded it will ask the user how many tickets they want: the proper input is an integer below the max size of the planeand above 0.
+
+next the client will ask how to select the tickets for each ticket, automatic, or manual; you can either type the word, or just the fist letter, a or m.
+
+if the user selects automatic, they will be given the next avalible seat on the plane. 
+if the user selects manual they will be asked to type 2 numbers between 1 and n, and 1 and m. seperated by a space. for example "2 2" will select the second row and second column.
+
+this will continue until all tickets are allocated. 
+
+once all tickets are sold the server will empty the plane and start a new one , with a message that the plane took off and a new one arived.
+  
